@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | AgroConnect</title>
+    <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+
+    <header class="orders-header">
+        <a href="index.html" class="logo">Agro<span>Connect</span></a>
+        <a href="farmer-dashboard.html" id="back-link" class="back-link">← Back to Dashboard</a>
+    </header>
+
+    <main class="orders-page">
+
+        <div class="orders-title">
+            <div>
+                <h1>My Orders</h1>
+                <p>Track every order from confirmation to delivery.</p>
+            </div>
+            <span id="order-count" class="order-count">0 Orders</span>
+        </div>
+
+        <div id="orders-container"></div>
+
+        <div id="empty-orders" class="empty-orders">
+            <h3>No orders yet</h3>
+            <p>An order is created when a farmer accepts a reservation.</p>
+        </div>
+
+    </main>
+
+    <script src="api.js"></script>
+    <script src="orders.js"></script>
+</body>
+</html>

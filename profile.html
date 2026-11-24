@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | AgroConnect</title>
+
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+    <header class="profile-header">
+        <a href="farmer-dashboard.html" class="logo">
+            Agro<span>Connect</span>
+        </a>
+
+        <a href="farmer-dashboard.html" class="back-link">
+            ← Back to Dashboard
+        </a>
+    </header>
+
+
+    <main class="profile-container">
+
+        <section class="profile-heading">
+            <div>
+                <p class="eyebrow">ACCOUNT SETTINGS</p>
+                <h1>My Profile</h1>
+                <p>Manage your personal and farm information.</p>
+            </div>
+
+            <span class="account-badge">Farmer Account</span>
+        </section>
+
+
+        <section class="profile-card">
+
+            <div class="profile-avatar">
+                <span id="profile-initials">DF</span>
+            </div>
+
+            <div class="profile-summary">
+                <h2 id="profile-name">Demo Farmer</h2>
+                <p id="profile-email">farmer@example.com</p>
+                <span class="verification-badge" id="verification-status">
+                    Verification status unavailable
+                </span>
+            </div>
+
+        </section>
+
+
+        <form id="profile-form">
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <h2>Personal Information</h2>
+                    <p>Your registered account information.</p>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" disabled>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <h2>Farm Information</h2>
+                    <p>Update information about your agricultural business.</p>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+                        <label for="farm-name">Farm Name</label>
+                        <input
+                            type="text"
+                            id="farm-name"
+                            placeholder="Enter your farm name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="farm-address">Farm Address</label>
+                        <textarea
+                            id="farm-address"
+                            rows="3"
+                            placeholder="Enter your farm address"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input
+                            type="text"
+                            id="state"
+                            placeholder="e.g. Ogun State"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <div id="profile-message"></div>
+
+
+            <div class="profile-actions">
+
+                <button type="reset" class="cancel-button">
+                    Cancel
+                </button>
+
+                <button type="submit" class="save-button">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <script src="api.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+</html>

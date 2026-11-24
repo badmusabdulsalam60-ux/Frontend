@@ -1,0 +1,202 @@
+/* INCOMING REQUESTS SECTION */
+
+.requests-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.requests-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.requests-heading h2 {
+    color: #1d422b;
+    margin: 0 0 8px;
+}
+
+.requests-heading p {
+    color: #78857b;
+    font-size: 14px;
+    margin: 0;
+}
+
+#request-count {
+    background: #e9f2e5;
+    color: #438b38;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* REQUEST CARD */
+
+#farmer-requests-container .request-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    border: 1px solid #e5ebe5;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+    background: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#farmer-requests-container .request-card h3 {
+    grid-column: 1 / -1;
+    color: #1d422b;
+    font-size: 21px;
+    margin: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #edf1ed;
+}
+
+#farmer-requests-container .request-card p {
+    display: block;
+    margin: 0;
+    padding: 12px;
+    background: #f8faf7;
+    border-radius: 8px;
+    color: #66756a;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+#farmer-requests-container .request-card p strong {
+    display: block;
+    color: #1d422b;
+    margin-bottom: 4px;
+}
+
+
+/* REQUEST STATUS */
+
+#farmer-requests-container .request-status {
+    grid-column: 1 / -1;
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background: #fff3d9;
+    color: #a36b00;
+}
+
+.status-accepted {
+    background: #e6f4e3;
+    color: #438b38;
+}
+
+.status-rejected {
+    background: #fde8e8;
+    color: #bd3434;
+}
+
+
+/* REQUEST BUTTONS */
+
+#farmer-requests-container .request-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.request-actions button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+.accept-request {
+    background: #438b38;
+    color: white;
+}
+
+.reject-request {
+    background: #fde8e8;
+    color: #bd3434;
+}
+
+.accept-request:hover {
+    background: #32732b;
+}
+
+.reject-request:hover {
+    background: #f8d4d4;
+}
+
+
+/* EMPTY STATE */
+
+.no-requests {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.no-requests h3 {
+    color: #1d422b;
+}
+
+.no-requests p {
+    color: #78857b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 700px) {
+
+    .requests-section {
+        padding: 18px;
+    }
+
+    .requests-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #farmer-requests-container .request-card {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    #farmer-requests-container .request-card h3,
+    #farmer-requests-container .request-status,
+    #farmer-requests-container .request-actions {
+        grid-column: 1;
+    }
+
+    #farmer-requests-container .request-actions {
+        flex-direction: column;
+    }
+
+    .request-actions button {
+        width: 100%;
+    }
+
+}

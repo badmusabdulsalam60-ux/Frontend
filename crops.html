@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops | AgroConnect</title>
+    <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+
+    <header class="orders-header">
+        <a href="index.html" class="logo">Agro<span>Connect</span></a>
+        <a href="farmer-dashboard.html" id="back-link" class="back-link">← Back to Dashboard</a>
+    </header>
+
+    <main class="orders-page">
+
+        <div class="orders-title">
+            <div>
+                <h1>Crops</h1>
+                <p>The crops farmers can list. Add a new crop or rename an existing one.</p>
+            </div>
+            <span id="crop-count" class="order-count">0 Crops</span>
+        </div>
+
+        <form id="crop-form" class="order-card crop-form">
+
+            <h3 id="crop-form-title">Add a new crop</h3>
+
+            <input type="hidden" id="crop-id">
+
+            <div class="crop-fields">
+
+                <input type="text" id="crop-name" placeholder="Crop name" required>
+
+                <select id="crop-category" required>
+                    <option>Grain</option>
+                    <option>Vegetable</option>
+                    <option>Fruit</option>
+                    <option>Tuber</option>
+                    <option>Legume</option>
+                    <option>Other</option>
+                </select>
+
+                <input type="text" id="crop-description" placeholder="Description (optional)">
+
+            </div>
+
+            <div class="order-actions">
+                <button type="submit" class="order-action" id="crop-save">Add Crop</button>
+                <button type="button" class="order-action danger" id="crop-cancel" style="display:none;">Cancel edit</button>
+            </div>
+
+            <p id="crop-message" role="status"></p>
+
+        </form>
+
+        <div id="crops-container"></div>
+
+    </main>
+
+    <script src="api.js"></script>
+    <script src="crops.js"></script>
+</body>
+</html>

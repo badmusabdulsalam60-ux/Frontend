@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | AgroConnect</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+    <main class="auth-page">
+        <div class="auth-card">
+
+            <a href="index.html" class="auth-logo">
+                Agro<span>Connect</span>
+            </a>
+
+            <h2>Create Your Account</h2>
+            <p class="auth-description">Join the AgroConnect community</p>
+
+            <div class="role-selection">
+                <button type="button" class="role-btn active" data-role="Farmer">
+                    🌱 Farmer
+                </button>
+                <button type="button" class="role-btn" data-role="Buyer">
+                    🛒 Buyer
+                </button>
+            </div>
+
+            <form id="registerForm">
+                <input type="hidden" id="userRole" value="Farmer">
+
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Choose a username" autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" autocomplete="tel" required>
+                </div>
+
+                <div id="farmerFields">
+                    <div class="form-group">
+                        <label for="farmName">Farm Name</label>
+                        <input type="text" id="farmName" placeholder="Enter your farm name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Farm Address</label>
+                        <input type="text" id="location" placeholder="Enter your farm address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" placeholder="Enter your state">
+                    </div>
+                </div>
+
+                <div id="buyerFields" hidden>
+                    <div class="form-group">
+                        <label for="buyerType">Buyer Type</label>
+                        <select id="buyerType">
+                            <option value="Individual">Individual</option>
+                            <option value="Business">Business</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="businessNameGroup" hidden>
+                        <label for="businessName">Business Name</label>
+                        <input type="text" id="businessName" placeholder="Enter your business name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password"
+                        autocomplete="new-password" minlength="8" required>
+                </div>
+
+                <button type="submit" class="auth-submit" id="registerButton">
+                    Register
+                </button>
+
+                <p id="registerMessage" class="form-message" role="status"></p>
+            </form>
+
+            <p class="auth-switch">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buyer Dashboard | AgroConnect</title>
+
+    <link rel="stylesheet" href="buyer-dashboard.css">
+</head>
+
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">
+    ☰
+</button>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                Agro<span>Connect</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="#overview" class="nav-link active">
+                    <span>▦</span>
+                    Overview
+                </a>
+
+                <a href="marketplace.html" class="nav-link">
+                    <span>🛒</span>
+                    Browse Produce
+                </a>
+
+                <a href="my-requests.html" class="nav-link">
+                    <span>📋</span>
+                    My Requests
+                </a>
+                <a href="orders.html" class="nav-link">
+                    <span>📦</span>
+                    My Orders
+                </a>
+
+                <a href="buyer-profile.html" class="nav-link">
+                    <span>👤</span>
+                    Profile
+                </a>
+
+            </nav>
+
+            <a href="login.html" class="logout-link">
+                <span>↪</span>
+                Log Out
+            </a>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content" id="overview">
+
+            <!-- WELCOME SECTION -->
+
+            <section class="welcome-section">
+
+                <div>
+                    <p class="welcome-label">BUYER DASHBOARD</p>
+
+                    <h1>Welcome back, <span id="buyer-name">Buyer</span>!</h1>
+
+                    <p>
+                        Find quality agricultural produce directly from farmers.
+                    </p>
+                </div>
+
+                <a href="marketplace.html" class="browse-button">
+                    Browse Produce
+                </a>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">🌾</div>
+                    <p>Available Produce</p>
+                    <h2 id="available-count">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <p>My Requests</p>
+                    <h2 id="total-requests">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <p>My Orders</p>
+                    <h2 id="total-orders">0</h2>
+                </div>
+
+            </section>
+
+
+            <!-- RECENT REQUESTS -->
+
+            <section class="content-section" id="my-requests">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>My Recent Requests</h2>
+                        <p>Keep track of your purchase requests.</p>
+                    </div>
+
+                    <span id="request-total">0 Requests</span>
+
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Produce</th>
+                                <th>Farmer</th>
+                                <th>Quantity</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="recent-requests">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div id="empty-requests" class="empty-state">
+
+                    <h3>No purchase requests yet</h3>
+
+                    <p>
+                        Your submitted purchase requests will appear here.
+                    </p>
+
+                    <a href="marketplace.html">Explore Produce</a>
+
+                </div>
+
+            </section>
+
+
+            <!-- BROWSE PRODUCE PROMOTION -->
+
+            <section class="browse-promotion">
+
+                <div>
+                    <h2>Looking for fresh agricultural produce?</h2>
+
+                    <p>
+                        Explore available harvests and connect directly
+                        with farmers on AgroConnect.
+                    </p>
+
+                    <a href="marketplace.html">
+                        Explore Marketplace →
+                    </a>
+                </div>
+
+                <div class="promotion-icon">
+                    🌱
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="api.js"></script>
+    <script src="buyer-dashboard.js"></script>
+
+</body>
+
+</html>

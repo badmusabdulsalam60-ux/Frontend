@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Listing | AgroConnect</title>
+
+    <link rel="stylesheet" href="create-listing.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <!-- HEADER -->
+
+        <header class="page-header">
+
+            <a href="farmer-dashboard.html" class="logo">
+                Agro<span>Connect</span>
+            </a>
+
+            <a href="farmer-dashboard.html" class="back-link">
+                ← Back to Dashboard
+            </a>
+
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="listing-page">
+
+            <div class="listing-intro">
+
+                <span class="intro-label">FARMER PORTAL</span>
+
+                <h1>List Your Upcoming Harvest</h1>
+
+                <p>
+                    Connect with potential buyers before your
+                    produce is ready for harvest.
+                </p>
+
+            </div>
+
+
+            <!-- LISTING CARD -->
+
+            <div class="listing-card">
+
+
+                <!-- LEFT IMAGE -->
+
+                <div class="listing-image">
+
+                    <div class="image-overlay">
+
+                        <h2>Your Harvest Deserves a Market.</h2>
+
+                        <p>
+                            List your produce today and connect
+                            with buyers looking for quality
+                            agricultural produce.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT FORM -->
+
+                <div class="listing-form-container">
+
+                    <div class="form-heading">
+
+                        <h2>Create Harvest Listing</h2>
+
+                        <p>
+                            Enter your upcoming harvest details.
+                        </p>
+
+                    </div>
+
+
+                    <form id="produce-form">
+
+
+                        <!-- CROP TYPE -->
+
+                        <div class="form-group">
+
+                            <label for="crop">
+                                Crop Type
+                            </label>
+
+                            <select id="crop" name="crop" required>
+
+                                <option value="">
+                                    Select Crop
+                                </option>
+
+                                <option value="Maize">Maize</option>
+
+                                <option value="Rice">Rice</option>
+
+                                <option value="Cassava">Cassava</option>
+
+                                <option value="Yam">Yam</option>
+
+                                <option value="Beans">Beans</option>
+
+                                <option value="Others">Others</option>
+
+                            </select>
+
+                            <button type="button" id="toggle-new-crop"
+                                style="background:none;border:none;color:#14783b;cursor:pointer;padding:6px 0;font-size:14px;">
+                                + Crop not on the list? Add it
+                            </button>
+
+                            <div id="new-crop-box"
+                                style="display:none;gap:8px;flex-wrap:wrap;align-items:center;">
+
+                                <input type="text" id="new-crop-name"
+                                    placeholder="Crop name (e.g. Plantain)">
+
+                                <select id="new-crop-category">
+                                    <option>Grain</option>
+                                    <option>Vegetable</option>
+                                    <option>Fruit</option>
+                                    <option>Tuber</option>
+                                    <option>Legume</option>
+                                    <option>Other</option>
+                                </select>
+
+                                <button type="button" id="save-new-crop">Add Crop</button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="quantity">
+                                    Quantity
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="quantity"
+                                    name="quantity"
+                                    placeholder="e.g. 100"
+                                    min="1"
+                                    required>
+
+                            </div>
+
+
+                            <!-- UNIT -->
+
+                            <div class="form-group">
+
+                                <label for="unit">
+                                    Unit
+                                </label>
+
+                                <select id="unit" name="unit" required>
+
+                                    <option value="">
+                                        Select Unit
+                                    </option>
+
+                                    <option value="bags">
+                                        Bags
+                                    </option>
+
+                                    <option value="kg">
+                                        Kilograms
+                                    </option>
+
+                                    <option value="crates">
+                                        Crates
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRICE -->
+
+                        <div class="form-group">
+
+                            <label for="price">
+                                Price Per Unit (₦)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="price"
+                                name="price"
+                                placeholder="e.g. 45000"
+                                min="1"
+                                required>
+
+                        </div>
+
+
+                        <!-- HARVEST DATE -->
+
+                        <div class="form-group">
+
+                            <label for="harvest-date">
+                                Expected Harvest Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="harvest-date"
+                                name="harvestDate"
+                                required>
+
+                        </div>
+
+
+                        <!-- LOCATION -->
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                Farm Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="e.g. Abeokuta, Ogun State"
+                                required>
+
+                        </div>
+
+
+                        <!-- DESCRIPTION -->
+
+                        <div class="form-group">
+
+                            <label for="description">
+                                Description (Optional)
+                            </label>
+
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="3"
+                                maxlength="500"
+                                placeholder="Tell buyers more about your harvest..."></textarea>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <p id="form-message" role="status"
+                            aria-live="polite"></p>
+
+
+                        <!-- SUBMIT BUTTON -->
+
+                        <button type="submit" id="publish-button">
+
+                            Publish Listing
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer class="page-footer">
+
+            <p>
+                © 2026 AgroConnect. Connect. Trade. Grow.
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="api.js"></script>
+
+    <script src="create-listing.js"></script>
+
+</body>
+
+</html>

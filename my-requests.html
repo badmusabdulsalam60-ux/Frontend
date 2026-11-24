@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Requests | AgroConnect</title>
+
+    <link rel="stylesheet" href="my-requests.css">
+</head>
+
+<body>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button class="menu-toggle" id="menu-toggle">
+        ☰
+    </button>
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            Agro<span>Connect</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="buyer-dashboard.html" class="nav-link">
+                Overview
+            </a>
+
+            <a href="marketplace.html" class="nav-link">
+                Browse Produce
+            </a>
+
+            <a href="my-requests.html" class="nav-link active">
+                My Requests
+            </a>
+            <a href="orders.html" class="nav-link">
+                My Orders
+            </a>
+
+            <a href="buyer-profile.html" class="nav-link">
+                Profile
+            </a>
+
+        </nav>
+
+        <a href="login.html" class="logout-link">
+            Log Out
+        </a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="page-header">
+            <h1>My Requests</h1>
+            <p>Track your produce requests and stay updated on farmers' responses.</p>
+        </header>
+
+
+        <!-- SUMMARY CARDS -->
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Requests</h3>
+                <h2 id="total-requests">0</h2>
+                <p>All your requests</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending Requests</h3>
+                <h2 id="pending-requests">0</h2>
+                <p>Awaiting farmer response</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Accepted Requests</h3>
+                <h2 id="accepted-requests">0</h2>
+                <p>Approved by farmers</p>
+            </div>
+
+        </section>
+
+
+        <!-- REQUESTS TABLE -->
+        <section class="requests-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>All Requests</h2>
+                    <p>View and monitor your produce requests.</p>
+                </div>
+
+                <a href="marketplace.html" class="browse-button">
+                    + Browse Produce
+                </a>
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Produce</th>
+                            <th>Farmer</th>
+                            <th>Quantity</th>
+                            <th>Price / Unit</th>
+                            <th>Total</th>
+                            <th>Farm Location</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="all-requests">
+
+                    </tbody>
+
+                </table>
+
+                <div id="empty-requests" class="empty-state">
+                    <h3>No requests yet</h3>
+                    <p>You haven't requested any produce yet.</p>
+
+                    <a href="marketplace.html">
+                        Explore Marketplace
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="api.js"></script>
+    <script src="my-requests.js"></script>
+
+</body>
+</html>

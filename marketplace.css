@@ -1,0 +1,488 @@
+/* GENERAL */
+
+body {
+    margin: 0;
+    background: #f7f9f6;
+    color: #24352a;
+    font-family: Arial, sans-serif;
+}
+
+
+/* HEADER */
+
+.market-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+}
+
+.market-logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1d422b;
+    text-decoration: none;
+}
+
+.market-logo span,
+.market-footer span {
+    color: #70a83b;
+}
+
+.market-header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.market-header nav a {
+    text-decoration: none;
+    color: #405347;
+    font-size: 14px;
+}
+
+.market-header nav a.active {
+    color: #438b38;
+    font-weight: bold;
+}
+
+.market-header nav .nav-register {
+    background: #438b38;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+
+/* HERO */
+
+.market-hero {
+    background: #e9f2e5;
+    padding: 75px 7%;
+}
+
+.market-hero-content {
+    max-width: 750px;
+}
+
+.market-label {
+    color: #438b38;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.market-hero h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    color: #1d422b;
+}
+
+.market-hero h1 span {
+    color: #69a33e;
+}
+
+.market-hero p {
+    color: #647468;
+    line-height: 1.7;
+}
+
+
+/* MAIN CONTAINER */
+
+.marketplace-container {
+    padding: 55px 7%;
+}
+
+.market-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.market-intro h2 {
+    color: #1d422b;
+    margin-bottom: 8px;
+}
+
+.market-intro p {
+    color: #78857b;
+    font-size: 14px;
+}
+
+
+/* FILTERS */
+
+.filter-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.search-box,
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.filter-section label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #405347;
+}
+
+.filter-section input,
+.filter-section select {
+    padding: 13px;
+    border: 1px solid #dce4dc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filter-section input:focus,
+.filter-section select:focus {
+    border-color: #438b38;
+}
+
+#reset-filters {
+    background: #e9f2e5;
+    color: #438b38;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* HARVEST GRID */
+
+.harvest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* HARVEST CARD */
+
+.harvest-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.harvest-card:hover {
+    transform: translateY(-5px);
+}
+
+.harvest-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.harvest-details {
+    padding: 20px;
+}
+
+.harvest-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.harvest-top h3 {
+    color: #1d422b;
+    margin: 0;
+}
+
+.available-badge {
+    background: #e6f4e3;
+    color: #438b38;
+    font-size: 11px;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+.harvest-location {
+    color: #7b887e;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.harvest-info {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #edf0ed;
+    margin-top: 18px;
+    padding-top: 15px;
+}
+
+.harvest-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.info-label {
+    font-size: 11px;
+    color: #89948c;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #344b39;
+}
+
+.harvest-date {
+    color: #78857b;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.view-details {
+    width: 100%;
+    background: #438b38;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.view-details:hover {
+    background: #32732b;
+}
+
+
+/* EMPTY STATE */
+
+.empty-marketplace {
+    display: none;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.empty-marketplace h3 {
+    color: #1d422b;
+}
+
+.empty-marketplace p {
+    color: #78857b;
+    line-height: 1.7;
+}
+
+
+/* DETAILS MODAL */
+
+.details-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.details-content {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.close-details {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #405347;
+}
+
+.details-content h2 {
+    color: #1d422b;
+}
+
+.details-content p {
+    line-height: 1.7;
+    color: #66756a;
+}
+
+.details-content img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* FOOTER */
+
+.market-footer {
+    background: #1d422b;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.market-footer h3 {
+    font-size: 23px;
+}
+
+.market-footer p {
+    color: #d0dfd2;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.market-footer .copyright {
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+
+/* RESPONSIVENESS */
+
+@media (max-width: 900px) {
+
+    .harvest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .market-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .market-header nav {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .market-header nav a {
+        font-size: 12px;
+    }
+
+    .market-hero {
+        padding: 55px 7%;
+    }
+
+    .market-hero h1 {
+        font-size: 32px;
+    }
+
+    .market-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-section {
+        grid-template-columns: 1fr;
+    }
+
+    .harvest-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* PURCHASE REQUEST FORM */
+
+.details-content hr {
+    border: none;
+    border-top: 1px solid #e5ebe5;
+    margin: 25px 0;
+}
+
+.details-content h3 {
+    color: #1d422b;
+    margin-bottom: 10px;
+}
+
+#request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#request-form label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #405347;
+    margin-top: 8px;
+}
+
+#request-form input,
+#request-form textarea {
+    padding: 13px;
+    border: 1px solid #dce4dc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#request-form input:focus,
+#request-form textarea:focus {
+    border-color: #438b38;
+}
+
+.submit-request {
+    background: #438b38;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-request:hover {
+    background: #32732b;
+}
+
+#request-message {
+    font-size: 13px;
+    line-height: 1.6;
+}

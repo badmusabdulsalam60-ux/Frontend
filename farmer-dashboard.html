@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Dashboard | AgroConnect</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="farmer-requests.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-brand">
+
+                <a href="index.html" class="brand-logo">
+                    🌱 AgroConnect
+                </a>
+
+                <p>Connect. Trade. Grow.</p>
+
+            </div>
+
+
+            <nav class="sidebar-navigation">
+
+                <a href="farmer-dashboard.html" class="nav-item active">
+
+                    <span>⌂</span>
+                    Overview
+
+                </a>
+
+                <a href="my-listings.html" class="nav-item">
+
+                    <span>▦</span>
+                    My Listings
+
+                </a>
+
+                <a href="create-listing.html" class="nav-item">
+
+                    <span>＋</span>
+                    Create Listing
+
+                </a>
+
+                <a href="#buyer-requests" class="nav-item">
+
+                    <span>♧</span>
+                    Buyer Requests
+
+                </a>
+                <a href="orders.html" class="nav-item">
+                    <span>📦</span>
+                    Orders
+                </a>
+                <a href="crops.html" class="nav-item">
+                    <span>🌱</span>
+                    Crops
+                </a>
+
+                <a href="profile.html" class="nav-item">
+
+                    <span>♙</span>
+                    Profile
+
+                </a>
+
+            </nav>
+
+
+            <a href="login.html" class="logout-button">
+
+                <span>⇥</span>
+                Logout
+
+            </a>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <button class="menu-button" id="menuButton"
+                    aria-label="Toggle sidebar" aria-expanded="false">
+                    ☰
+                </button>
+
+                <div class="topbar-right">
+
+                    <button class="notification-button"
+                        aria-label="Notifications">
+
+                        ♟
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+                    <div class="user-avatar" id="user-avatar">
+                        F
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- DASHBOARD CONTENT -->
+
+            <div class="dashboard-content">
+
+
+                <!-- WELCOME SECTION -->
+
+                <section class="welcome-section">
+
+                    <div>
+
+                        <h1>Welcome back, <span id="farmer-name">Farmer</span>! 👋</h1>
+
+                        <p>
+                            Here's what's happening on your farm.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- INCOMING BUYER REQUESTS -->
+
+       <section class="requests-section" id="buyer-requests">
+
+    <div class="requests-heading">
+
+        <div>
+            <h2>Incoming Buyer Requests</h2>
+
+            <p>
+                Manage purchase requests from interested buyers.
+            </p>
+        </div>
+
+        <span id="request-count">0 Requests</span>
+
+    </div>
+
+
+    <div id="farmer-requests-container">
+
+        <!-- JavaScript displays requests here -->
+
+    </div>
+
+
+    <div id="no-requests" class="no-requests">
+
+        <h3>No requests yet</h3>
+
+        <p>
+            Buyer requests will appear here when someone
+            expresses interest in your harvest.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+                <!-- STATISTICS CARDS -->
+
+                <section class="statistics-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green-icon">
+                            🌿
+                        </div>
+
+                        <div>
+
+                            <h2 id="stat-listings">0</h2>
+
+                            <p>Total Listings</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange-icon">
+                            📦
+                        </div>
+
+                        <div>
+
+                            <h2 id="stat-bookings">0</h2>
+
+                            <p>Total Bookings</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple-icon">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <h2 id="stat-orders">0</h2>
+
+                            <p>Total Orders</p>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- RECENT LISTINGS -->
+
+                <section class="dashboard-section">
+
+
+                    <div class="section-header">
+
+                        <h2>Recent Listings</h2>
+
+                        <a href="my-listings.html">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="recent-listings-container" id="recent-listings">
+                        <p>Loading your listings...</p>
+                    </div>
+
+                </section>
+
+
+
+                <!-- RECENT BUYER REQUESTS -->
+
+                <section class="dashboard-section">
+
+
+                    <div class="section-header">
+
+                        <h2>Recent Buyer Requests</h2>
+
+                        <a href="#buyer-requests">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="requests-container">
+
+
+                        <!-- REQUEST 1 -->
+
+                        <article class="request-card">
+
+
+                            <div class="buyer-avatar">
+                                JD
+                            </div>
+
+
+                            <div class="buyer-information">
+
+                                <h3>John Doe</h3>
+
+                                <p>Wants 50 bags of Maize</p>
+
+                            </div>
+
+
+                            <div class="request-status">
+
+                                <span class="status pending-status">
+                                    Pending
+                                </span>
+
+                                <small>2h ago</small>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- REQUEST 2 -->
+
+                        <article class="request-card">
+
+
+                            <div class="buyer-avatar second-avatar">
+                                AM
+                            </div>
+
+
+                            <div class="buyer-information">
+
+                                <h3>Ahmed Musa</h3>
+
+                                <p>Wants 30 bags of Rice</p>
+
+                            </div>
+
+
+                            <div class="request-status">
+
+                                <span class="status accepted-status">
+                                    Accepted
+                                </span>
+
+                                <small>5h ago</small>
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- QUICK ACTION -->
+
+                <section class="quick-action">
+
+                    <div>
+
+                        <h2>Have a new harvest coming?</h2>
+
+                        <p>
+                            Publish your upcoming produce and connect
+                            with potential buyers.
+                        </p>
+
+                    </div>
+
+                    <a href="create-listing.html">
+                        + Create Listing
+                    </a>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="api.js"></script>
+    <script src="farmer-dashboard.js"></script>
+    <script src="farmer-requests.js"></script>
+
+</body>
+
+</html>

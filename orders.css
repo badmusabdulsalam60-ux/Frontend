@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f4;
+    color: #1c2b21;
+}
+
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    background: #1b4429;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #8fd18a;
+}
+
+.back-link {
+    color: #d7ecd4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.orders-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+
+.orders-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.orders-title h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+}
+
+.orders-title p {
+    margin: 0;
+    color: #5d6b62;
+}
+
+.order-count {
+    background: #e2f1df;
+    color: #1b4429;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.order-card {
+    background: #ffffff;
+    border: 1px solid #e1e8e1;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.order-top h3 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
+.order-number {
+    margin: 0;
+    font-size: 13px;
+    color: #5d6b62;
+}
+
+.order-status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    background: #fff3d6;
+    color: #8a5a00;
+    white-space: nowrap;
+}
+
+.order-status.completed,
+.order-status.delivered {
+    background: #d9f2de;
+    color: #14783b;
+}
+
+.order-status.cancelled {
+    background: #fde0de;
+    color: #b02a1f;
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 4px 20px;
+    margin: 14px 0;
+    font-size: 14px;
+}
+
+.order-details p {
+    margin: 4px 0;
+}
+
+.order-steps {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    gap: 6px;
+}
+
+.order-steps li {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 4px;
+    border-radius: 8px;
+    background: #eef2ee;
+    color: #7a877f;
+}
+
+.order-steps li.done {
+    background: #cfe9cb;
+    color: #1b4429;
+}
+
+.order-steps li.current {
+    background: #1b4429;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.order-cancelled {
+    color: #b02a1f;
+    font-weight: 700;
+    margin: 14px 0;
+}
+
+.order-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-action {
+    border: none;
+    background: #14783b;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.order-action:hover {
+    background: #0f6030;
+}
+
+.order-action.danger {
+    background: #ffffff;
+    color: #b02a1f;
+    border: 1px solid #b02a1f;
+}
+
+.order-action:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.empty-orders {
+    display: none;
+    text-align: center;
+    background: #ffffff;
+    border: 1px dashed #c9d6c9;
+    border-radius: 14px;
+    padding: 40px 20px;
+    color: #5d6b62;
+}
+
+.error-text {
+    color: #b02a1f;
+}
+
+@media (max-width: 600px) {
+    .order-steps {
+        flex-wrap: wrap;
+    }
+
+    .order-steps li {
+        flex: 1 1 30%;
+    }
+}
+
+/* ---- crops page form ---- */
+.crop-form {
+    margin-bottom: 24px;
+}
+
+.crop-form h3 {
+    margin: 0 0 14px;
+}
+
+.crop-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.crop-fields input,
+.crop-fields select {
+    padding: 11px 12px;
+    border: 1px solid #c9d6c9;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}

@@ -1,0 +1,262 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17251c;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= AUTH BACKGROUND ================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 15px;
+
+    background:
+        linear-gradient(
+            rgba(5, 55, 28, 0.25),
+            rgba(5, 55, 28, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ================= AUTH CARD ================= */
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+
+    text-align: center;
+}
+
+
+/* ================= LOGO ================= */
+
+.auth-logo {
+    display: inline-block;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    color: #123b25;
+
+    margin-bottom: 20px;
+}
+
+.auth-logo span {
+    color: #29964e;
+}
+
+
+/* ================= HEADINGS ================= */
+
+.auth-card h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.auth-description {
+    color: #78847b;
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= ROLE SELECTION ================= */
+
+.role-selection {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 22px;
+}
+
+.role-btn {
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #edf1ef;
+
+    color: #35483b;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.role-btn.active {
+    background: #08612e;
+    color: white;
+}
+
+
+/* ================= FORM ================= */
+
+#registerForm,
+#loginForm {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #dfe5e0;
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #168342;
+
+    box-shadow: 0 0 0 3px rgba(22,131,66,0.08);
+}
+
+
+/* ================= SUBMIT BUTTON ================= */
+
+.auth-submit {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #08612e;
+    color: white;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-top: 8px;
+
+    cursor: pointer;
+}
+
+.auth-submit:hover {
+    background: #03451f;
+}
+
+
+/* ================= LOGIN OPTIONS ================= */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 12px 0 15px;
+
+    font-size: 11px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.login-options a {
+    color: #14783b;
+    font-weight: 700;
+}
+
+
+/* ================= SWITCH ACCOUNT ================= */
+
+.auth-switch {
+    margin-top: 22px;
+
+    font-size: 12px;
+
+    color: #68776d;
+}
+
+.auth-switch a {
+    color: #14783b;
+    font-weight: 700;
+}
+
+
+/* ================= FORM MESSAGES ================= */
+
+.form-message {
+    text-align: center;
+
+    font-size: 12px;
+
+    margin-top: 12px;
+}
+
+
+/* ================= LOGIN CARD ================= */
+
+.login-card {
+    max-width: 420px;
+}
+
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+
+@media (max-width: 480px) {
+
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+    .auth-card h2 {
+        font-size: 21px;
+    }
+
+}

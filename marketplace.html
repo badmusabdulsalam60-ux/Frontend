@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marketplace | AgroConnect</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="marketplace.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="market-header">
+
+        <a href="index.html" class="market-logo">
+            Agro<span>Connect</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="marketplace.html" class="active">Marketplace</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="nav-register">
+                Get Started
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="market-hero">
+
+        <div class="market-hero-content">
+
+            <p class="market-label">AGROCONNECT MARKETPLACE</p>
+
+            <h1>
+                Find Fresh Harvests.
+                <span>Connect With Farmers.</span>
+            </h1>
+
+            <p>
+                Discover agricultural produce from farmers
+                and connect with them before harvest.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MARKETPLACE -->
+    <main class="marketplace-container">
+
+        <div class="market-intro">
+
+            <div>
+                <h2>Available Harvests</h2>
+
+                <p>
+                    Explore produce currently listed by farmers.
+                </p>
+            </div>
+
+            <p id="results-count">0 harvests found</p>
+
+        </div>
+
+
+        <!-- SEARCH AND FILTERS -->
+        <section class="filter-section">
+
+            <div class="search-box">
+
+                <label for="search-input">Search produce</label>
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search maize, rice, cassava..."
+                >
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <label for="crop-filter">Crop category</label>
+
+                <select id="crop-filter">
+
+                    <option value="">All crops</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Cassava">Cassava</option>
+                    <option value="Yam">Yam</option>
+                    <option value="Beans">Beans</option>
+                    <option value="Others">Others</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <label for="location-filter">Location</label>
+
+                <input
+                    type="text"
+                    id="location-filter"
+                    placeholder="Enter location"
+                >
+
+            </div>
+
+
+            <button id="reset-filters" type="button">
+                Reset
+            </button>
+
+        </section>
+
+
+        <!-- HARVEST CARDS -->
+        <section class="harvest-section">
+
+            <div id="marketplace-listings" class="harvest-grid">
+
+                <!-- JavaScript will display listings here -->
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div id="empty-marketplace" class="empty-marketplace">
+
+                <h3>No harvests found</h3>
+
+                <p>
+                    Try changing your search or filters.
+                    New harvests will appear here when farmers publish them.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- DETAILS MODAL -->
+    <div id="details-modal" class="details-modal">
+
+        <div class="details-content">
+
+            <button id="close-details" class="close-details">
+                &times;
+            </button>
+
+            <div id="details-body"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="market-footer">
+
+        <h3>Agro<span>Connect</span></h3>
+
+        <p>
+            Connecting farmers with buyers.
+            Building better agricultural opportunities.
+        </p>
+
+        <p class="copyright">
+            &copy; 2026 AgroConnect. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="api.js"></script>
+    <script src="marketplace.js"></script>
+
+</body>
+</html>
